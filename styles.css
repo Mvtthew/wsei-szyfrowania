@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  color: #eeeeee;
+  font-family: 'Noto Sans';
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #222831;
+}
+
+#app .box {
+  padding: 4rem;
+}
+
+#app .box input {
+  width: 100%;
+  padding: 1rem;
+  background-color: transparent;
+  border: 0;
+  -webkit-box-shadow: 2px 2px 0 #393e46;
+          box-shadow: 2px 2px 0 #393e46;
+  margin-top: 0.5rem;
+  color: #eeeeee;
+}
+
+#app .box input.output {
+  color: #ffd369;
+}
+/*# sourceMappingURL=styles.css.map */
