@@ -40,7 +40,5 @@ const handleVigenere = () => {
 	vOutputElement.value = coded;
 };
 
-vInputElement.addEventListener('change', handleVigenere);
 vInputElement.addEventListener('keyup', handleVigenere);
-vKeyElement.addEventListener('change', handleVigenere);
 vKeyElement.addEventListener('keyup', handleVigenere);
