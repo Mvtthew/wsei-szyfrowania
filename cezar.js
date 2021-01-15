@@ -1,25 +1,25 @@
-const cezarAlphabet = 'AĄBCĆDEĘFGHIJKLŁMNŃOÓPRSŚTUWYZŹŻ';
+const cAlphabet = 'AĄBCĆDEĘFGHIJKLŁMNŃOÓPRSŚTUWYZŹŻ';
 
-const inputElement = document.querySelector('#cezar .input');
-const offsetElement = document.querySelector('#cezar .offset');
-const outputElement = document.querySelector('#cezar .output');
+const cInputElement = document.querySelector('#cezar .input');
+const cOffsetElement = document.querySelector('#cezar .offset');
+const cOutputElement = document.querySelector('#cezar .output');
 
 const handleCezar = () => {
-	const input = inputElement.value;
-	const offset = offsetElement.value;
+	const input = cInputElement.value;
+	const offset = cOffsetElement.value;
 	if (input && offset && offset > 0) {
 		let output = '';
 		for (let i = 0; i < input.length; i++) {
 			const letter = input[i].toUpperCase();
-			const letterIndex = cezarAlphabet.indexOf(letter);
-			output += cezarAlphabet[(letterIndex + offset) % cezarAlphabet.length];
+			const letterIndex = cAlphabet.indexOf(letter);
+			output += cAlphabet[(letterIndex + offset) % cAlphabet.length];
 		}
 
-		outputElement.value = output;
+		cOutputElement.value = output;
 	}
 };
 
-inputElement.addEventListener('change', handleCezar);
-inputElement.addEventListener('keyup', handleCezar);
-offsetElement.addEventListener('change', handleCezar);
-offsetElement.addEventListener('keyup', handleCezar);
+cInputElement.addEventListener('change', handleCezar);
+cInputElement.addEventListener('keyup', handleCezar);
+cOffsetElement.addEventListener('change', handleCezar);
+cOffsetElement.addEventListener('keyup', handleCezar);

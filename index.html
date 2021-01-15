@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="./styles.css" />
 
 		<script src="./cezar.js" defer></script>
+		<script src="./vigenere.js" defer></script>
 	</head>
 	<body>
 		<main id="app">
@@ -18,7 +19,14 @@
 				<h2>CEZAR</h2>
 				<input class="input" placeholder="Input" />
 				<input class="offset" placeholder="Offset" type="number" />
-				<input class="output" placeholder="Output" disabled />
+				<input class="output" placeholder="Output" />
+			</div>
+
+			<div class="box" id="vigenere">
+				<h2>Vigenère</h2>
+				<input class="input" placeholder="Input" />
+				<input class="key" placeholder="Key" />
+				<input class="output" placeholder="Output" />
 			</div>
 		</main>
 	</body>
