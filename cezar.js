@@ -6,13 +6,14 @@ const cOutputElement = document.querySelector('#cezar .output');
 
 const handleCezar = () => {
 	const input = cInputElement.value;
-	const offset = cOffsetElement.value;
+	const offset = parseInt(cOffsetElement.value);
 	if (input && offset && offset > 0) {
 		let output = '';
 		for (let i = 0; i < input.length; i++) {
 			if (input[i] != ' ') {
 				const letter = input[i].toUpperCase();
 				const letterIndex = cAlphabet.indexOf(letter);
+				console.log(letterIndex);
 				output += cAlphabet[(letterIndex + offset) % cAlphabet.length];
 			} else {
 				output += ' ';
@@ -25,7 +26,7 @@ const handleCezar = () => {
 
 const handleDecodeCezar = () => {
 	const input = cOutputElement.value;
-	const offset = cOffsetElement.value;
+	const offset = parseInt(cOffsetElement.value);
 	if (input && offset && offset > 0) {
 		let output = '';
 		for (let i = 0; i < input.length; i++) {
@@ -43,6 +44,5 @@ const handleDecodeCezar = () => {
 };
 
 cInputElement.addEventListener('keyup', handleCezar);
-cOffsetElement.addEventListener('change', handleCezar);
 cOffsetElement.addEventListener('keyup', handleCezar);
 cOutputElement.addEventListener('keyup', handleDecodeCezar);
